@@ -1,0 +1,24 @@
+type caCertEntity @entity{
+  ca: ID!
+  certId: [Bytes]!
+}
+
+type userCertEntity @entity{
+  user: ID!
+  certId: [Bytes]!
+}
+
+type certStateEntity @entity{
+  certId: ID!
+  state: String
+}
+
+type requestUploadEntity @entity{
+   owner: Bytes
+   certId: ID!
+}
+
+type caPublicKeyEntity @entity{
+  ca: ID! 
+  pk: String!
+}
